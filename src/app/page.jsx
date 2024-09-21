@@ -1,19 +1,19 @@
 import Link from "next/link";
 import styles from "./homepage.module.css";
+import Featured from "@/components/featured/Featured";
+import CategoryList from "@/components/categoryList/CategoryList";
+import CardList from "@/components/cardList/CardList";
+import Menu from "@/components/menu/Menu";
 
 export default function Home() {
   return (
-    <>
-      <Link href='/'>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laborum illum nisi, itaque neque officiis, eos ab, hic dicta ullam facere. Quidem, laboriosam labore. Quam veritatis iusto officia sequi tempore.</h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ut ipsam neque optio ipsum quo nobis, nisi minus inventore nihil est suscipit aspernatur quaerat odio asperiores temporibus, accusamus odit provident?
-      </Link>
-    </>
+    <div className={styles.container}>
+      <Featured/>
+      <CategoryList/>
+      <div className="content">
+        <CardList/>
+        <Menu/>
+      </div>
+    </div>
   );
 }
