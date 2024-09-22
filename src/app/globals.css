@@ -3,12 +3,15 @@
   --textColor: #000;
   --softBg: #f0f0f0;
   --softTextColor: #333333;
+  --fontPrimary: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 body {

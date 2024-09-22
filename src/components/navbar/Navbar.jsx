@@ -8,11 +8,11 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.social}>
-        <Image src="/facebook.png" alt="facebook" width={24} height={24}/>
-        <Image src="/instagram.png" alt="instagram" width={24} height={24}/>
-        <Image src="/youtube.png" alt="youtube" width={24} height={24}/>
+        <Image src="/facebook.png" alt="facebook" width={25} height={25}/>
+        <Image src="/instagram.png" alt="instagram" width={25} height={25}/>
+        <Image src="/twitter.png" alt="twitter" width={25} height={25}/>
       </div>
-      <div className={styles.logo}>bulletin</div>
+      <div className={styles.logo}>.bulletin</div>
       <div className={styles.links}>
         <Link href='/'>Home</Link>
         <Link href='/'>About</Link>
