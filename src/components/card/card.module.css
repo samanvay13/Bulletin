@@ -1,0 +1,46 @@
+.container {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.date {
+  color: gray;
+}
+
+.category {
+  color: crimson;
+  font-weight: 500;
+}
+
+.description {
+  color: var(--softTextColor);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  cursor: pointer;
+}

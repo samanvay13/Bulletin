@@ -24,27 +24,27 @@
 }
 
 .category.frontend {
-  background-color: bisque;
+  background-color: #57c4ff31;
 }
 
 .category.backend {
-  background-color: rgb(255, 196, 232);
+  background-color: #da85c731;
 }
 
 .category.fullstack {
-  background-color: rgb(196, 238, 255);
+  background-color: #7fb88133;
 }
 
 .category.ai {
-  background-color: rgb(255, 196, 196);
+  background-color: #ff795736;
 }
 
 .category.devops {
-  background-color: rgb(196, 255, 196);
+  background-color: #ffb04f45;
 }
 
 .category.seo {
-  background-color: rgb(209, 196, 255);
+  background-color: #5e4fff31;
 }
 
 @media screen and (max-width: 1280px) {
