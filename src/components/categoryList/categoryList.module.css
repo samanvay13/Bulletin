@@ -1,0 +1,72 @@
+.container {
+  margin-top: 70px;
+}
+
+.title {
+  margin: 50px 0;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 15%;
+  height: 80px;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.category.frontend {
+  background-color: bisque;
+}
+
+.category.backend {
+  background-color: rgb(255, 196, 232);
+}
+
+.category.fullstack {
+  background-color: rgb(196, 238, 255);
+}
+
+.category.ai {
+  background-color: rgb(255, 196, 196);
+}
+
+.category.devops {
+  background-color: rgb(196, 255, 196);
+}
+
+.category.seo {
+  background-color: rgb(209, 196, 255);
+}
+
+@media screen and (max-width: 1280px) {
+  .category {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .category {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .category {
+    width: 100%;
+  }
+}

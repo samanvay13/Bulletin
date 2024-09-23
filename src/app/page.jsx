@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.container}>
       <Featured/>
       <CategoryList/>
-      <div className="content">
+      <div className={styles.content}>
         <CardList/>
         <Menu/>
       </div>
