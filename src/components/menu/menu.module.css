@@ -1,3 +1,22 @@
 .container {
   flex: 2;
+  margin-top: 60px;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.items {
+  margin-top: 35px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
