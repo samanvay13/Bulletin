@@ -1,0 +1,29 @@
+.description {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.deleteContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.deleteButton {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: crimson;
+    margin-top: 40px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition:  transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.deleteButton:hover {
+    background-color: rgb(255, 32, 76);
+    transform: translateY(-5px);
+}

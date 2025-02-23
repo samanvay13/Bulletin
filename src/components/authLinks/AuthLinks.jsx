@@ -1,37 +1,52 @@
-"use client"
-import React, { useState } from "react";
-import styles from './authLinks.module.css';
+"use client";
+
 import Link from "next/link";
+import styles from "./authLinks.module.css";
+import { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
-  //temporary
-  const status = "notAuthenticated";
+  const { status } = useSession();
+
+  const openGmail = () => {
+    const email = "tripathisamanvay13@gmail.com";
+    const subject = encodeURIComponent("Inquiry from Website");
+    const body = encodeURIComponent("Hello, I’d like to get in touch with you...");
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+  
+    window.open(url, "_blank");
+  };
+  
   return (
-    <div className={styles.container}>
-      {status === "notAuthenticated" ? (
-        <Link href='/login' className={styles.link}>Login</Link>
-      ) : (
-        <Link href='/login' className={styles.link}>Logout</Link>
-      )}
-      <div className={styles.burger} onClick={() => setOpen(!open)}>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
+    <>
+      <div className={styles.container}>
+        {status === "authenticated" && (
+          <>
+            <span className={styles.logoutLink} onClick={signOut}>
+              Logout
+            </span>
+          </>
+        )}
+        <div className={styles.burger} onClick={() => setOpen(!open)}>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+        </div>
+        {open && (
+          <div className={styles.responsiveMenu}>
+            <Link href="/" className={styles.burgerLink}>Homepage</Link>
+            <Link href="/about" className={styles.burgerLink}>About</Link>
+            <p  className={styles.burgerLink} onClick={openGmail}>Contact</p>
+            {status === "authenticated" && (
+              <>
+                <span className={styles.burgerLogoutLink} onClick={signOut}>Logout</span>
+              </>
+            )}
+          </div>
+        )}
       </div>
-      {open && (
-        <div className={styles.responsiveMenu}>
-          <Link href='/'>Home</Link>
-          <Link href='/'>About</Link>
-          <Link href='/'>Contact</Link>
-          {status === "notAuthenticated" ? (
-            <Link href='/login'>Login</Link>
-          ) : (
-            <Link href='/login'>Logout</Link>
-          )}
-            </div>
-          )}
-    </div>
+    </>
   );
 }
 

@@ -14,6 +14,11 @@
   object-fit: cover;
   border: 3px solid #ccc;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.1);
 }
 
 .textContainer {
@@ -47,4 +52,16 @@
 
 .date {
   color: gray;
+}
+
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imageContainer {
+    display: unset;
+  }
 }

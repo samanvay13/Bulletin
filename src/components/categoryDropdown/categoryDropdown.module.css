@@ -1,0 +1,44 @@
+.customSelect {
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px 50px;
+  }
+  
+  .selectButton {
+    background-color: #c0e3ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+  }
+  
+  .selectButton:hover {
+    background-color: #b1d5f3;
+  }
+  
+  .options {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .optionButton {
+    background-color: #ffdcba;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .optionButton:hover {
+    transform: translateY(-3px);
+    background-color: #ffd0a1;
+  }
+  
+  

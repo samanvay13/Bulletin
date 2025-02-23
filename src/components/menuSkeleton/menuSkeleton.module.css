@@ -1,0 +1,51 @@
+.skeletonContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+    background: #f3f3f3;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 8px;
+  }
+  
+  /* Left - Image Skeleton */
+  .skeletonImage {
+    width: 20%;
+    height: 100%;
+    background: #ddd;
+    border-radius: 50px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Right - Content Skeleton */
+  .skeletonContent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .skeletonDescription {
+    width: 90%;
+    height: 16px;
+    background: #ddd;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  
+  /* Pulse animation for skeleton effect */
+  @keyframes pulse {
+    0% {
+      background-color: #eee;
+    }
+    50% {
+      background-color: #ddd;
+    }
+    100% {
+      background-color: #eee;
+    }
+  }
+  

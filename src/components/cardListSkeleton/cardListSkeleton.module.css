@@ -1,0 +1,83 @@
+.skeletonContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 350px;
+    background: #f3f3f3;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+  }
+  
+  /* Left - Image Skeleton */
+  .skeletonImage {
+    width: 40%;
+    height: 100%;
+    background: #ddd;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Right - Content Skeleton */
+  .skeletonContent {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .skeletonTitle {
+    width: 70%;
+    height: 24px;
+    background: #ddd;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .skeletonDescription {
+    width: 90%;
+    height: 16px;
+    background: #ddd;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .skeletonButton {
+    width: 120px;
+    height: 36px;
+    background: #ccc;
+    border-radius: 6px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Pulse animation for skeleton effect */
+  @keyframes pulse {
+    0% {
+      background-color: #eee;
+    }
+    50% {
+      background-color: #ddd;
+    }
+    100% {
+      background-color: #eee;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .skeletonContainer {
+        height: 360px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    .skeletonImage {
+      display: none;
+    }
+
+    .skeletonContent {
+        width: 100%;
+  }
+}
+  

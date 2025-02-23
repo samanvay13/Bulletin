@@ -5,7 +5,7 @@
   gap: 50px;
 }
 
-.imgContainer {
+.imageContainer {
   flex: 1;
   height: 350px;
   position: relative;
@@ -31,6 +31,10 @@
   font-weight: 500;
 }
 
+.category:hover {
+  color: crimson;
+}
+
 .description {
   color: var(--softTextColor);
   font-size: 16px;
@@ -42,5 +46,20 @@
   border: none;
   border-radius: 5px;
   width: max-content;
+  color: #fff;
+  font-weight: bold;
+  background-color: #43a6e7;
   cursor: pointer;
+  transition:  transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #3a97d4;
+  transform: translateY(5px);
+}
+
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
 }

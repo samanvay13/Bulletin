@@ -20,3 +20,9 @@
   flex-direction: column;
   gap: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+}

@@ -21,30 +21,40 @@
   height: 80px;
   justify-content: center;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.category.frontend {
+.category:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.category.Frontend {
   background-color: #57c4ff31;
 }
 
-.category.backend {
+.category.Backend {
   background-color: #da85c731;
 }
 
-.category.fullstack {
+.category.FullStack {
   background-color: #7fb88133;
 }
 
-.category.ai {
+.category.AI {
   background-color: #ff795736;
 }
 
-.category.devops {
+.category.DevOps {
   background-color: #ffb04f45;
 }
 
-.category.seo {
+.category.SEO {
   background-color: #5e4fff31;
+}
+
+.categoryText {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1280px) {

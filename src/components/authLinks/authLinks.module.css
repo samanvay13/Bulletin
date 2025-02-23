@@ -1,6 +1,28 @@
 .container {
   display: flex;
   align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;;
+}
+
+.link:hover {
+  color: #54baff;
+  transform: translateY(-2px);
+}
+
+.logoutLink {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;;
+}
+
+.logoutLink:hover {
+  color: #ff5454;
+  transform: translateY(-2px);
 }
 
 .burger {
@@ -33,12 +55,20 @@
   gap: 50px;
 }
 
-@media screen and (max-width: 640px) {
+.burgerLink, .burgerLogoutLink {
+  cursor: pointer;
+}
+
+.burgerLogoutLink {
+  color: #ff5454;
+}
+
+@media screen and (max-width: 768px) {
   .burger {
     display: flex;
   }
 
-  .link {
+  .link, .logoutLink {
     display: none;
   }
 }

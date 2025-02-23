@@ -2,21 +2,21 @@ import React from "react";
 import styles from './menuPost.module.css';
 import Link from "next/link";
 import Image from "next/image";
+import { timeAgo } from "@/utils/timeAgo";
 
-const MenuPost = () => {
+const MenuPost = ({ item }) => {
   return (
-    <Link href='/' className={styles.item}>
+    <Link href={`/posts/${item.slug}`} className={styles.item}>
       <div className={styles.imageContainer}>
-        <Image src='/p1.png' alt="image" fill className={styles.image}/>
+        <Image src={item.img} alt="image" fill className={styles.image}/>
       </div>
       <div className={styles.textContainer}>
         <span className={`${styles.category} ${styles.frontend}`}>
-          Frontend
+          {item.catSlug}
         </span>
-        <h3 className={styles.postTitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <h3 className={styles.postTitle}>{item.title}</h3>
         <div className={styles.details}>
-          <span className={styles.username}>John Doe - </span>
-          <span className={styles.date}>23.09.2024</span>
+          <span className={styles.date}>{timeAgo(item.createdAt)}</span>
         </div>
       </div>
     </Link>

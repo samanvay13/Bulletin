@@ -5,18 +5,22 @@
   height: 100px;
 }
 
-.social {
+.logo {
   display: flex;
   gap: 20px;
   flex: 1;
   cursor: pointer;
 }
 
-.logo {
+.title {
+  font-family: Lobster;
   text-align: center;
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 40px;
   flex: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .links {
@@ -28,10 +32,26 @@
   flex: 1;
 }
 
+.link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;;
+}
+
+.link:hover {
+  color: #54baff;
+  transform: translateY(-2px);
+}
+
 @media screen and (max-width: 1280px) {
   .logo {
-    font-size: 30px;
+    display: none;
   }
+
+  .title {
+    font-size: 34px;
+    text-align: left;
+  }
+
   .links {
     font-size: 16px;
     gap: 15px;
@@ -39,26 +59,22 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .social {
-    display: none;
-  }
-  .logo {
+  .title {
     text-align: left;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .logo {
-    font-size: 24px;
+  .title {
+    font-size: 27px;
+  }
+  .link {
+    display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
   .links {
     justify-content: flex-end;
-  }
-  
-  .link {
-    display: none;
   }
 }
